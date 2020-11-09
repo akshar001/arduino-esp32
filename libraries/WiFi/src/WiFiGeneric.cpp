@@ -148,6 +148,8 @@ static bool wifiLowLevelInit(bool persistent){
 static bool wifiLowLevelDeinit(){
     //deinit not working yet!
     //esp_wifi_deinit();
+    lowLevelInitDone = false;
+    // So that we can re-init via arduino code
     return true;
 }
 
